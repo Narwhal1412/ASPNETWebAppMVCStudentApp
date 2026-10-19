@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using ASPNETWebAppMVCStudentApp.Filters;
 
 namespace ASPNETWebAppMVCStudentApp
 {
@@ -8,6 +9,7 @@ namespace ASPNETWebAppMVCStudentApp
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new RequireLoginAttribute());
         }
     }
 }
